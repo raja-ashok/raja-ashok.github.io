@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Raja Ashok - My Thoughts, Opinions and Views</title>
-    <description>A Passionate Coder in this Planet, with a decade of Industry experience in Communication Protocol Development.
+    <description>A Passionate Coder in this Planet.
 </description>
     <link>http://yourdomain.com/</link>
     <atom:link href="http://yourdomain.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 27 Sep 2018 01:00:33 +0530</pubDate>
-    <lastBuildDate>Thu, 27 Sep 2018 01:00:33 +0530</lastBuildDate>
+    <pubDate>Sat, 29 Sep 2018 10:58:10 +0530</pubDate>
+    <lastBuildDate>Sat, 29 Sep 2018 10:58:10 +0530</lastBuildDate>
     <generator>Jekyll v3.0.1</generator>
     
       <item>
         <title>Hello World!</title>
-        <description>&lt;p&gt;This is my Hello World post on my blog. After a decade of serving as a Passionate Coder in Communication Protocol, I decided to share my thoughts, opinions and views about the technology which I am working.&lt;/p&gt;
+        <description>&lt;p&gt;This is my Hello World post on my blog. After a decade of playng a role as a Network Protocol Developer, I decided to share my thoughts, opinions and views about the technology which I am working.&lt;/p&gt;
 </description>
         <pubDate>Wed, 26 Sep 2018 22:48:32 +0530</pubDate>
         <link>http://yourdomain.com/jekyll/update/2018/09/26/Hello-World.html</link>
