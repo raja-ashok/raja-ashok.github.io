@@ -6,22 +6,36 @@
 </description>
     <link>http://yourdomain.com/</link>
     <atom:link href="http://yourdomain.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sat, 29 Sep 2018 10:58:10 +0530</pubDate>
-    <lastBuildDate>Sat, 29 Sep 2018 10:58:10 +0530</lastBuildDate>
+    <pubDate>Tue, 02 Oct 2018 19:21:06 +0530</pubDate>
+    <lastBuildDate>Tue, 02 Oct 2018 19:21:06 +0530</lastBuildDate>
     <generator>Jekyll v3.0.1</generator>
     
       <item>
-        <title>Hello World!</title>
-        <description>&lt;p&gt;This is my Hello World post on my blog. After a decade of playng a role as a Network Protocol Developer, I decided to share my thoughts, opinions and views about the technology which I am working.&lt;/p&gt;
+        <title>How Passwords are Handled Securely in Internet</title>
+        <description>&lt;p&gt;Everyone of us would have thought about how secure our passwords are handled in Internet. Because we started using more number of online based services now. And also we use similar pattern of passwords in most of the Internet logins. Sometimes same password for most of the sites. So if any one of the site’s credential gets stolen means, almost all of our login credentials get leaked. Here I am going to share how our passwords are handled securely in Internet.&lt;/p&gt;
+
+&lt;h2 id=&quot;how-the-password-reaches-server-securely&quot;&gt;How the Password Reaches Server Securely&lt;/h2&gt;
+&lt;p&gt;Web application uses either HTTP or HTTPS protocol for data transmission between browser and Server. HTTP sends data in plain text, where as HTTPS sends in encrypted form.  Secure version of HTTP protocol is HTTPS, in which it runs on top of TLS Protocol. TLS is a well known Security Protocol for data transmission over TCP/IP. User while entering login credentials needs to check whether the website is running on HTTP or HTTPS. If it runs on HTTPS then it makes sure that all the data (including Password) is transmitted to Server securely.&lt;/p&gt;
+
+&lt;h2 id=&quot;how-the-server-stores-password-securely&quot;&gt;How the Server Stores Password Securely&lt;/h2&gt;
+&lt;p&gt;User login credentials (Username and Password) are stored in the Server’s Database. Whenever user tires to login, the server matches the received credentials with the stored one in DB for authentication. Here its server responsibility to store the password in DB securely. If it stores password as plaintext in DB, then its quite vulnerable. Because any hacker can intrude to web server’s DB and steal all the user login credentials. These kind of attacks are happening even today to few of the web servers.&lt;/p&gt;
+
+&lt;h3 id=&quot;server-storing-password-in-encrypted-form&quot;&gt;Server Storing Password in Encrypted Form&lt;/h3&gt;
+&lt;p&gt;Server can store password of all of its user in encrypted form, by using a common key. Whenever user tries to login, server can decrypt the encrypted password for matching with the received credentials. But this does not solve the problem, because intruder can steal this key also while stealing the DB data. So storing password as encrypted form is not a good method.&lt;/p&gt;
+
+&lt;h3 id=&quot;server-storing-password-as-hash-value&quot;&gt;Server Storing Password as Hash value&lt;/h3&gt;
+&lt;p&gt;Server can use Hash functions (like SHA256, SHA512 etc) to generate the hash value for the password and store it. Hash function is like one way path, getting back original string from hash value is impossible. Server while doing client authentication it regenerates the hash value for the received credentials and compares with the hash value in DB. Even if intruder steals the DB data the only way to get the original password is by generating hash value for various combinations of password and compare with the stealed data.&lt;/p&gt;
+
+&lt;h3 id=&quot;need-for-storing-password-as-salted-hash-value&quot;&gt;Need for Storing Password as Salted Hash Value&lt;/h3&gt;
+&lt;p&gt;So storing password as hash value in Server’s DB is the perfect way to fight against intruders. But hacker world is having Rainbow Tables, server has to fight against that also. Rainbow Table is a lookup table for reversing password hashes, it has a trillions of entry for various combination of passwords. So to fight against rainbow tables Server uses Salt. Salt is a predefined string which is added with passwords before generating hash value. Salt and its method of adding with password is server specific and it can be in any form. For example, consider a salt “#!4=” and a user password “pass@123”. Server can add the salt as prefix or suffix to the password before generating hash value. Or else it can insert like “pa#ss!@1423=”. Basically adding salt to password gives a unique hash output that wont be available in Rainbow Table.&lt;/p&gt;
+
 </description>
-        <pubDate>Wed, 26 Sep 2018 22:48:32 +0530</pubDate>
-        <link>http://yourdomain.com/jekyll/update/2018/09/26/Hello-World.html</link>
-        <guid isPermaLink="true">http://yourdomain.com/jekyll/update/2018/09/26/Hello-World.html</guid>
+        <pubDate>Tue, 02 Oct 2018 16:00:00 +0530</pubDate>
+        <link>http://yourdomain.com/cryptography/2018/10/02/How-Passwords-are-handled-Securely-in-Internet.html</link>
+        <guid isPermaLink="true">http://yourdomain.com/cryptography/2018/10/02/How-Passwords-are-handled-Securely-in-Internet.html</guid>
         
         
-        <category>jekyll</category>
-        
-        <category>update</category>
+        <category>Cryptography</category>
         
       </item>
     
