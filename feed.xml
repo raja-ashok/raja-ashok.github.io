@@ -6,8 +6,8 @@
 </description>
     <link>http://yourdomain.com/</link>
     <atom:link href="http://yourdomain.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 02 Oct 2018 19:21:06 +0530</pubDate>
-    <lastBuildDate>Tue, 02 Oct 2018 19:21:06 +0530</lastBuildDate>
+    <pubDate>Tue, 02 Oct 2018 20:21:24 +0530</pubDate>
+    <lastBuildDate>Tue, 02 Oct 2018 20:21:24 +0530</lastBuildDate>
     <generator>Jekyll v3.0.1</generator>
     
       <item>
@@ -27,7 +27,7 @@
 &lt;p&gt;Server can use Hash functions (like SHA256, SHA512 etc) to generate the hash value for the password and store it. Hash function is like one way path, getting back original string from hash value is impossible. Server while doing client authentication it regenerates the hash value for the received credentials and compares with the hash value in DB. Even if intruder steals the DB data the only way to get the original password is by generating hash value for various combinations of password and compare with the stealed data.&lt;/p&gt;
 
 &lt;h3 id=&quot;need-for-storing-password-as-salted-hash-value&quot;&gt;Need for Storing Password as Salted Hash Value&lt;/h3&gt;
-&lt;p&gt;So storing password as hash value in Server’s DB is the perfect way to fight against intruders. But hacker world is having Rainbow Tables, server has to fight against that also. Rainbow Table is a lookup table for reversing password hashes, it has a trillions of entry for various combination of passwords. So to fight against rainbow tables Server uses Salt. Salt is a predefined string which is added with passwords before generating hash value. Salt and its method of adding with password is server specific and it can be in any form. For example, consider a salt “#!4=” and a user password “pass@123”. Server can add the salt as prefix or suffix to the password before generating hash value. Or else it can insert like “pa#ss!@1423=”. Basically adding salt to password gives a unique hash output that wont be available in Rainbow Table.&lt;/p&gt;
+&lt;p&gt;So storing password as hash value in Server’s DB is the perfect way to fight against intruders. But hacker world is having Rainbow Tables, server has to fight against that also. Rainbow Table is a lookup table for reversing password hashes, it has a trillions of entry for various combination of passwords. So to fight against rainbow tables Server uses Salt. Salt is a predefined string which is added with passwords before generating hash value. Salt and its method of adding with password is server specific and it can be in any form. For example, consider a salt &lt;code class=&quot;highlighter-rouge&quot;&gt;#!4=&lt;/code&gt; and a user password &lt;code class=&quot;highlighter-rouge&quot;&gt;pass@123&lt;/code&gt;. Server can add the salt as prefix or suffix to the password before generating hash value. Or else it can insert in between password like &lt;code class=&quot;highlighter-rouge&quot;&gt;pa#ss!@1423=&lt;/code&gt;. Basically adding salt to password gives a unique hash output that wont be available in Rainbow Table.&lt;/p&gt;
 
 </description>
         <pubDate>Tue, 02 Oct 2018 16:00:00 +0530</pubDate>
